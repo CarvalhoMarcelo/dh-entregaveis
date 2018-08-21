@@ -1,0 +1,24 @@
+Seeding: MovieSeeder
+
+   Exception  : Property [first_name] does not exist on this collection instance.
+
+  at C:\xampp\htdocs\dh-entregaveis\aula43\vendor\laravel\framework\src\Illuminate\Support\Collection.php:1889
+    1885|      */
+    1886|     public function __get($key)
+    1887|     {
+    1888|         if (! in_array($key, static::$proxies)) {
+  > 1889|             throw new Exception("Property [{$key}] does not exist on this collection instance.");
+    1890|         }
+    1891| 
+    1892|         return new HigherOrderCollectionProxy($this, $key);
+    1893|     }
+
+  Exception trace:
+
+  1   Illuminate\Support\Collection::__get("first_name")
+      C:\xampp\htdocs\dh-entregaveis\aula43\database\seeds\MovieSeeder.php:18
+
+  2   MovieSeeder::run()
+      C:\xampp\htdocs\dh-entregaveis\aula43\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:29
+
+  Please use the argument -v to see more details.
