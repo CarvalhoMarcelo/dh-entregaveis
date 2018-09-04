@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" method="post" id="form1">
+        <div>
+            <label for="nome">Informe seu Nome:</label>
+            <input type="text" name="nome" id="nome" placeholder="informe o seu nome">
+        </div>
+        <br>
+        <div>
+            <label for="email">Informe seu Email:</label>
+            <input type="email" name="email" id="email" placeholder="informe seu email">
+        </div>
+        <br>
+        <div>
+            <label for="senha">Informe uma Senha</label>
+            <input type="password" name="senha" id="senha" placeholder="coloque uma senha">
+            <label for="senha">Confirme a Senha</label>
+            <input type="password" name="senha1" id="senha1" placeholder="confirme a sua senha">
+        </div>
+        <br>
+        <div>
+            <label for="sexo">Selecione o Sexo:</label>
+            <br>
+            <label for="Masculino">
+                <input type="radio" name="sexo" id="sexo" value="Masculino"> Masculino
+            </label>
+            <br>
+            <label for="Feminino">
+                <input type="radio" name="sexo" id="sexo" value="Feminino"> Feminino
+            </label>
+            <br>
+            <label for="naoinformado">
+                <input type="radio" name="sexo" id="sexo" value="naoinformado">Prefiro não informar
+            </label>
+        </div>
+        <br>
+        <p></p>
+        <div>
+            <label for="noticias">
+                <input type="checkbox" name="noticias" id="noticias">Clique para receber noticias do site
+            </label>
+        </div>
+        <p><br></p>
+
+        <button type="submit" value="validar">Enviar</button>
+        <button onclick="limpaFormulario()">Limpar Formulario</button>
+        <button onclick="criarTAG()">Ocultar Formulario</button>
+
+
+    </form>
+
+
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
