@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <section id="coment">
+
+    </section>
+    <br>
+    <p></p>
+
+    <form action="" id="formulario">
+        <div>
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome">
+        </div>
+        <br>
+        <div>
+            <label for="sobrenome">Sobrenome</label>
+            <input type="text" name="sobrenome" id="sobrenome">
+        </div>
+        <br>
+        <div>
+            <label for="comentarios">Comentarios</label>
+            <input type="text" name="comentarios" id="comentarios">
+        </div>
+        <br><br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script>
+        //Exercicio 3 EVENTOS        
+        function enviar(event) {
+            event.preventDefault()
+
+            let formul = document.forms[0]
+            let elemento = formul.elements
+
+            let sectionTAG = document.querySelector('#coment')
+
+            let comentarios = document.querySelector('#comentarios')
+            let data = new Date()
+                // let dia = format(data.getDate());
+                // let mes = format(data.getMonth() + 1);
+                // let ano = format(data.getFullYear());
+
+            sectionTAG.textContent = elemento['nome'].value + " " +
+                elemento['sobrenome'].value + ' disse em ' +
+                data.getDate('dd') + "/" + (data.getMonth() + 1) + "/" + data.getFullYear()
+        }
+        // document.getElementById('formulario').onsubmit = function() { enviar() }
+        // document.querySelector('#formulario').addEventListener('submit', enviar)
+        document.addEventListener('submit', enviar)
+    </script>
+
+
+
+</body>
+
+</html>
